@@ -1,9 +1,13 @@
 <h1>Current Player: {{ player }} </h1>
 
-<button (click) = "newGame()">Start new Game</button>
+<button class="btn" (click) = "newGame()">Start new Game</button>
 
 <h2 *ngIf="winner">
     Player {{ winner }} won the game!
+</h2>
+
+<h2 *ngIf="!winner && moveCount==9">
+    The game is a draw!
 </h2>
 
 <main>
